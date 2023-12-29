@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+body {
+    background: linear-gradient(to right, #6c5ce7, #5b0c6b);
+    font-family: 'Lato', sans-serif;
+    font-size: 1.3em;
+    width: 50%;
+    margin: 15px auto;
+    padding: 20px;
+    text-align: center;
+    min-height: 50vh;
+}
+
+#playList {
+    background: rgb(7, 43, 38);
+    border-radius: 10px;
+    text-align: left;
+    opacity: 0.8;
+    color: #3f7c16;
+}
+
+li {
+    padding: 10px;
+}
+
+li:hover,
+svg:hover {
+    cursor: pointer;
+    color: #1f1118;
+}
+
+li.active {
+    color: #6c5ce7;
+}
+
+#controls {
+    border: 1px #eee solid;
+    border-radius: 10px;
+    padding: 10px;
+    background: rgba(14, 43, 172, 0.8);
+    opacity: 0.8
+}
+
+svg {
+    color: #6c5ce7
+}
+
+progress {
+    width: 80%;
+    margin: 10px;
+    opacity: 0.5;
+}
+
+.timer {
+    width: 50%;
+    position: relative;
+    top: 10px;
+    left: 0px;
+    text-align: left;
+    float: left;
+    color: #6c5ce7;
+}
+
+.volumen {
+    width: 50%;
+    position: relative;
+    top: 10px;
+    right: 0px;
+    text-align: right;
+    float: left;
+    color: #6c5ce7;
+    margin-bottom: 20px;
+}
+
+#volumen {
+    width: 100px;
+}
+
+#currentPlay {
+    color: #6c5ce7
+}
+
+h3 {
+    color: #454480;
+    margin: 0px;
+}
+
+.icons {
+    min-width: 150px;
+    min-height: 75px;
+    display: flex;
+    justify-content: space-around;
+    animation: icons 12s linear infinite;
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.icons a {
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #5f51cc59;
+    border-radius: 50%;
+    box-shadow: 1px 1px 4px rgb(204, 203, 204);
+    transition: all 0.4s ease-in-out;
+}
+
+a:hover {
+    transform: scale(1.1);
+}
+
+@keyframes icons {
+    0% {
+        right: 0px;
+    }
+    10% {
+        right: 0px;
+    }
+    20% {
+        right: 100px;
+    }
+    30% {
+        right: 200px;
+        transform: rotate(2deg);
+    }
+    40% {
+        right: 100px;
+    }
+    50% {
+        right: 0px;
+        transform: rotate(0deg);
+        transform: scale(1.1);
+    }
+    60% {
+        right: -100px;
+    }
+    70% {
+        right: -200px;
+        transform: rotate(-2deg);
+    }
+    80% {
+        right: -100px;
+    }
+    90% {
+        right: 0px;
+    }
+    100% {
+        transform: rotate(0deg);
+        right: 0px;
+    }
+}
+
+@media all and (max-width: 768px) {
+    body {
+        background: linear-gradient(to left, #837ac4, #5b2266);
+        font-family: 'Lato', sans-serif;
+        font-size: 0.9em;
+        width: 50%;
+        margin: 15px auto;
+        padding: 20px;
+        text-align: center;
+        min-height: 50vh;
+    }
+    .volumen {
+        width: 100%;
+        position: relative;
+        top: 10px;
+        right: 0px;
+        text-align: right;
+        float: left;
+        color: #6c5ce7;
+        margin-bottom: 20px;
+    }
+    #volumen {
+        width: 50px;
+    }
+    #volmin {
+        width: 10px;
+        height: 10px;
+    }
+    #volmax {
+        width: 10px;
+        height: 10px;
+    }
+    .icons a {
+        text-decoration: none;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        background: #5f51cc59;
+        border-radius: 50%;
+        box-shadow: 1px 1px 4px rgb(204, 203, 204);
+        transition: all 0.4s ease-in-out;
+    }
+    @keyframes icons {
+        0% {
+            right: 0px;
+        }
+        10% {
+            right: 0px;
+        }
+        20% {
+            right: 50px;
+        }
+        30% {
+            right: 100px;
+            transform: rotate(2deg);
+        }
+        40% {
+            right: 50px;
+        }
+        50% {
+            right: 0px;
+            transform: rotate(0deg);
+            transform: scale(1.1);
+        }
+        60% {
+            right: -50px;
+        }
+        70% {
+            right: -100px;
+            transform: rotate(-2deg);
+        }
+        80% {
+            right: -50px;
+        }
+        90% {
+            right: 0px;
+        }
+        100% {
+            transform: rotate(0deg);
+            right: 0px;
+        }
+    }
+}
